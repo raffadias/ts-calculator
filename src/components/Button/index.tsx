@@ -5,7 +5,7 @@ type ButtonProps = {
   operation?: string;
   double?: string;
   triple?: string;
-  click?: (label: string) => void;
+  click: (label: string) => void;
 };
 
 function Button({ label, operation, double, triple, click }: ButtonProps) {
@@ -15,7 +15,7 @@ function Button({ label, operation, double, triple, click }: ButtonProps) {
   classes += triple ? triple : "";
 
   return (
-    <button onClick={() => click && click(label)} className={classes}>
+    <button onClick={() => click(label)} className={classes}>
       {label}
     </button>
   );

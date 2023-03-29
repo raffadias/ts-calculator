@@ -1,9 +1,20 @@
 import "./styles.css";
 
 type DisplayProps = {
-  value: string;
+  currentOperand: string;
+  previousOperand: string;
+  operation: string;
 };
 
-export function Display({ value }: DisplayProps) {
-  return <div className="display">{value}</div>;
+export function Display({ currentOperand, previousOperand, operation }: DisplayProps) {
+  return (
+    <>
+      <div className="displayPrevious">
+        {previousOperand} {operation}
+      </div>
+      <div className="display">
+        {currentOperand}
+      </div>
+    </>
+  );
 }
