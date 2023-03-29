@@ -1,5 +1,5 @@
-import Button from "../Button";
-import { Display } from "../Display";
+import Button from "@/components/Button";
+import { Display } from "@/components/Display";
 import "./styles.css";
 
 export function Calculator() {
